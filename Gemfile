@@ -6,23 +6,26 @@ ruby "~> 3.1"
 gem "thor", "~> 1.3.0"
 
 # Tests
-gem "minitest", "~> 5.21.2"
+gem "minitest", "~> 5.24.1"
 
 # CLI helper for running tests
 gem "minitest-sprint", "~> 1.2.0"
 
 # More test outputs
-gem "minitest-reporters", "~> 1.6.0"
+gem "minitest-reporters", "~> 1.7.1"
 
 # For an "after_all" callback.
 gem "minitest-hooks", "~> 1.5.0"
+
+# Retry certain flaky tests.
+gem "minitest-retry", "~> 0.2.2"
 
 # Test metadata for CI environment.
 gem "minitest-ci", "~> 3.4.0"
 
 # Ruby lint/style checker
 gem "rubocop", "~> 1.4", :require => false
-gem "rubocop-minitest", "~> 0.34.5", :require => false
+gem "rubocop-minitest", "~> 0.35.0", :require => false
 
 # Running background processes
 gem "childprocess"
@@ -37,7 +40,8 @@ gem "oj", "~> 3.10"
 # Database libraries
 gem "activerecord", "~> 7.1.1", :require => "active_record"
 gem "pg", "~> 1.5.3"
-gem "elasticsearch", "~> 7.13.3"
+gem "opensearch-ruby", "~> 3.4.0"
+gem "faraday-typhoeus", "~> 1.1.0"
 gem "active_attr", "~> 0.16.0"
 
 # Factories for test database data
@@ -69,7 +73,7 @@ gem "activesupport", "~> 7.1.1"
 gem "faker", "~> 3.0"
 
 # Concurrency helpers.
-gem "concurrent-ruby", "~> 1.2.0"
+gem "concurrent-ruby", "~> 1.3.3"
 
 # Time zone randomization for tests.
 gem "zonebie", "~> 0.6.1"
@@ -90,4 +94,4 @@ gem "awesome_print", "~> 1.9.2"
 gem "ice_nine", "~> 0.11.2"
 
 # Testing SMTP directly.
-gem "net-smtp", "~> 0.4.0"
+gem "net-smtp", "~> 0.5.0"
